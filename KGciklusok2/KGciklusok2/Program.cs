@@ -169,7 +169,42 @@ namespace KGciklusok2
                 Console.WriteLine($"{szam6} szám {pozitivNegativ}, {parosParatlan}, {oszthatoHarommal} 3-mal.");
             }
 
+            Console.WriteLine("--------------------------------------------------");
 
+            //8
+            string jelszo1 = "";
+            string jelszo2 = "";
+
+            while (true)
+            {
+                Console.Write("Add meg a jelszót: ");
+                jelszo1 = Console.ReadLine();
+
+                Console.Write("add meg megint a jelszót: ");
+                jelszo2 = Console.ReadLine();
+
+                if (jelszo1 == jelszo2)
+                {
+                    Console.WriteLine("Tovább léphetsz");
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Próbáld újra");
+                }
+            }
+
+            Console.Write("Adj meg bármilyen szöveget: ");
+            string szoveg = Console.ReadLine();
+
+            string visszafele = "";
+
+            for (int i = szoveg.Length - 1; i >= 0; i--)
+            {
+                visszafele += szoveg[i];
+            }
+
+            Console.WriteLine("Visszafelé: " + visszafele);
 
 
 
