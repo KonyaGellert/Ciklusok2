@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -103,12 +104,44 @@ namespace KGciklusok2
             Console.WriteLine($"5 karakternél hosszabb szavak száma: {otosszo}");
 
 
+            Console.WriteLine("--------------------------------------------------");
+
+            //5
 
 
+            int osszeg = 0, darab = 0;
+            int egyes = 0, kettes = 0, harmas = 0, negyes = 0, otos = 0;
 
+            Console.Write("Osztályzat (1-5, -1 vége): ");
+            int jegy = int.Parse(Console.ReadLine());
 
+            while (jegy != -1)
+            {
+                if (jegy >= 1 && jegy <= 5)
+                {
+                    osszeg += jegy;
+                    darab++;
+                    if (jegy == 1) egyes++;
+                    else if (jegy == 2) kettes++;
+                    else if (jegy == 3) harmas++;
+                    else if (jegy == 4) negyes++;
+                    else otos++;
+                }
 
+                Console.Write("Osztályzat (1-5, -1 vége): ");
+                jegy = int.Parse(Console.ReadLine());
+            }
 
+            if (darab > 0)
+                Console.WriteLine($"Átlag: {(double)osszeg / darab:F2}");
+            else
+                Console.WriteLine("Nem adtál meg osztályzatot.");
+
+            Console.WriteLine($"1-es: {egyes}, 2-es: {kettes}, 3-as: {harmas}, 4-es: {negyes}, 5-ös: {otos}");
+
+            Console.WriteLine("--------------------------------------------------");
+
+            //6
 
 
 
