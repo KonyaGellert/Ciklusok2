@@ -237,10 +237,58 @@ namespace KGciklusok2
 
             }
             Console.WriteLine($"{szamok2.Count} prím szám van.");
+
+
+
+
+            Console.WriteLine("--------------------------------------------------");
+
+            //10 (ez egy oktató videó segitségével készult)
+            int döntetlen = 0;
+            int nyertes = 0;
+            int vesztes = 0;
+            Random random = new Random();  
+            int tovabb = 0;
+            String player;
+            String computer;
+            while (tovabb <= 5)
+            {
+                Console.Write("Kérem a választását (kő, papír, olló): ");
+                player = Console.ReadLine().ToLower();
+                int computerChoice = random.Next(1, 4);
+                if (computerChoice == 1)
+                {
+                    computer = "kő";
+                }
+                else if (computerChoice == 2)
+                {
+                    computer = "papír";
+                }
+                else
+                {
+                    computer = "olló";
+                }
+                Console.WriteLine($"A gép választása: {computer}");
+                if (player == computer)
+                {
+                    Console.WriteLine("Döntetlen!");
+                    döntetlen++;
+                }
+                else if ((player == "kő" && computer == "olló") || (player == "papír" && computer == "kő") || (player == "olló" && computer == "papír"))
+                {
+                    Console.WriteLine("Nyertél!");
+                    nyertes++;
+                }
+                else
+                {
+                    Console.WriteLine("Vesztettél!");
+                    vesztes++;
+                }
+                tovabb++;
+            }
+            Console.WriteLine($"Eredmény: {nyertes} nyertes, {vesztes} vesztes, {döntetlen} döntetlen kört játszottál.");
+
         }
-
-
-
 
 
     }
