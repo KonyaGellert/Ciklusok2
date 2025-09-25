@@ -1,0 +1,7 @@
+C:\Users\konyag\source\repos\KGciklusok2\KGciklusok2\bin\Debug\KGciklusok2.exe.config
+C:\Users\konyag\source\repos\KGciklusok2\KGciklusok2\bin\Debug\KGciklusok2.exe
+C:\Users\konyag\source\repos\KGciklusok2\KGciklusok2\bin\Debug\KGciklusok2.pdb
+C:\Users\konyag\source\repos\KGciklusok2\KGciklusok2\obj\Debug\KGciklusok2.csproj.AssemblyReference.cache
+C:\Users\konyag\source\repos\KGciklusok2\KGciklusok2\obj\Debug\KGciklusok2.csproj.CoreCompileInputs.cache
+C:\Users\konyag\source\repos\KGciklusok2\KGciklusok2\obj\Debug\KGciklusok2.exe
+C:\Users\konyag\source\repos\KGciklusok2\KGciklusok2\obj\Debug\KGciklusok2.pdb
