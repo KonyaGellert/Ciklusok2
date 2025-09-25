@@ -142,7 +142,17 @@ namespace KGciklusok2
             Console.WriteLine("--------------------------------------------------");
 
             //6
+            Console.Write("Adj meg egy számot (1-10): ");
+            int szam5 = int.Parse(Console.ReadLine());
 
+            for (int i = 1; i <= 10; i++)
+            {
+                int eredmeny = szam5 * i;
+                if (eredmeny % 3 == 0)
+                {
+                    Console.WriteLine($"{szam5} x {i} = {eredmeny}");
+                }
+            }
 
 
 
