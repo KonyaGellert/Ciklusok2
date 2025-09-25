@@ -154,7 +154,20 @@ namespace KGciklusok2
                 }
             }
 
+            Console.WriteLine("--------------------------------------------------");
 
+            //7
+            for (int i = 1; i <= 10; i++)
+            {
+                Console.Write($"Kérem az {i}. számot: ");
+                int szam6 = int.Parse(Console.ReadLine());
+
+                string pozitivNegativ = szam6 > 0 ? "pozitív" : (szam6 < 0 ? "negatív" : "nulla");
+                string parosParatlan = szam6 % 2 == 0 ? "páros" : "páratlan";
+                string oszthatoHarommal = szam6 % 3 == 0 ? "osztható" : "nem osztható";
+
+                Console.WriteLine($"{szam6} szám {pozitivNegativ}, {parosParatlan}, {oszthatoHarommal} 3-mal.");
+            }
 
 
 
