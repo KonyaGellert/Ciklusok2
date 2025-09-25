@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace KGciklusok2
@@ -11,9 +12,9 @@ namespace KGciklusok2
         static void Main(string[] args)
         {
             //1
-            Console.WriteLine("Kérem az 1. számot: ");
+            Console.Write("Kérem az 1. számot: ");
             int szam1 = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Kérem a 2. számot: ");
+            Console.Write("Kérem a 2. számot: ");
             int szam2 = Convert.ToInt32(Console.ReadLine());
 
             if (szam1 < szam2)
@@ -28,22 +29,17 @@ namespace KGciklusok2
             Console.WriteLine("--------------------------------------------------");
 
             //2
-            Console.WriteLine("Adj meg egy számot");
+            Console.Write("Adj meg egy számot: ");
             int szam = int.Parse(Console.ReadLine());
             List<int> szamok = new List<int>();
 
             while (szam != 0)
             {
                 szamok.Add(szam);
-                Console.WriteLine("Adj meg egy számot");
+                Console.Write("Adj meg egy számot: ");
                 szam = int.Parse(Console.ReadLine());
             }
 
-            if (szamok.Count == 0)
-            {
-                Console.WriteLine("Nem adtál meg számot.");
-                return;
-            }
 
             int legtobbSzam = szamok[0];
             int legtobbDarab = 1;
@@ -64,6 +60,30 @@ namespace KGciklusok2
             }
 
             Console.WriteLine($"A legtöbbször megadott szám: {legtobbSzam} ({legtobbDarab} alkalommal)");
+
+            Console.WriteLine("--------------------------------------------------");
+
+            //3
+            List<int> paros = new List<int>();
+            List<int> paratlan = new List<int>();
+            for (int i = 0; i < 10; i++)
+            {
+                Console.Write("Kérem a számot: ");
+                int szam3 = int.Parse(Console.ReadLine());
+                if (szam3 % 2 == 0)
+                {
+                    paros.Add(szam3);
+                }
+                else
+                {
+                    paratlan.Add(szam3);
+                }
+
+            }
+
+
+            Console.WriteLine($"Páros számok: {string.Join(", ", paros)} és {paros.Count} db van");
+            Console.WriteLine($"Páratlan számok: {string.Join(", ", paratlan)} és {paratlan.Count} db van");
 
 
 
