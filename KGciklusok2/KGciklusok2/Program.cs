@@ -82,11 +82,25 @@ namespace KGciklusok2
             }
 
 
-            Console.WriteLine($"Páros számok: {string.Join(", ", paros)} és {paros.Count} db van");
-            Console.WriteLine($"Páratlan számok: {string.Join(", ", paratlan)} és {paratlan.Count} db van");
+            Console.WriteLine($"Páros számokbol {paros.Count} db van");
+            Console.WriteLine($"Páratlan számokbol {paratlan.Count} db van");
 
+            Console.WriteLine("--------------------------------------------------");
 
-
+            //4
+            Console.Write("Kérek egy szót: ");
+            string szo = Console.ReadLine();
+            int otosszo = 0;
+            while (szo != "vége")
+            {
+                Console.Write("Kérek egy szót: ");
+                szo = Console.ReadLine();
+                if (szo.Length > 5)
+                {
+                    otosszo++;
+                }
+            }
+            Console.WriteLine($"5 karakternél hosszabb szavak száma: {otosszo}");
 
 
 
